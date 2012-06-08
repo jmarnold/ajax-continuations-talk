@@ -1,7 +1,4 @@
-using FubuMVC.Ajax;
 using FubuMVC.Core;
-using FubuMVC.Spark;
-using FubuMVC.Validation;
 
 namespace AjaxContinuations
 {
@@ -18,12 +15,6 @@ namespace AjaxContinuations
 
 			Views
 				.TryToAttachWithDefaultConventions();
-
-			Import<RequestCorrelation>();
-			Import<ValidationPreview>();
-
-			this.UseSpark();
-			this.Validation(x => x.Actions.Include(call => FubuSemanticExtensions.IsHttpPost(call) && !FubuSemanticExtensions.IsValidationPreview(call)));
 		}
 	}
 }

@@ -10,7 +10,7 @@
   <element name="Display">this.DisplayFor(m =&gt; m.@property)</element>
   <element name="Input">this.InputFor(m =&gt; m.@property)</element>
   <element name="Form">
-    <start>this.ValidatingForm&lt;@model&gt;()</start>
+    <start>this.FormFor&lt;@model&gt;().ValidationSummary&lt;@model&gt;()</start>
     <end>this.EndForm()</end>
   </element>
 </bindings>

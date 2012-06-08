@@ -22,6 +22,10 @@ namespace AjaxContinuations
     {
     }
 
+	public class ProductTemplate
+	{
+	}
+
     public class ProductController
     {
         private readonly IEntityRepository _repository;
@@ -51,9 +55,5 @@ namespace AjaxContinuations
                            Products = _repository.All<Product>()
                        };
         }
-    }
-
-    public class ProductTemplate
-    {
     }
 }

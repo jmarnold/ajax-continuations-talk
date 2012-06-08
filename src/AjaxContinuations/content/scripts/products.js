@@ -10,7 +10,8 @@
         modal: true,
         buttons: {
             'Save': function () {
-                $('form', dialog).correlatedSubmit();
+            	$('form', dialog).submit();
+            	dialog.dialog('close');
             },
             'Cancel': function () {
                 dialog.dialog('close');
@@ -20,19 +21,5 @@
 
     $('#new-product').click(function() {
         dialog.dialog('open');
-    });
-
-    var form = $('form', dialog);
-    var preview = form.data('validation-preview');
-    $(':input', form).change(function () {
-        $.ajax({
-            url: preview,
-            type: 'POST',
-            data: form.formSerialize(),
-            beforeSend: function (xhr) {
-                this.correlationId = form.attr('id');
-                $.continuations.setupRequest.call(this, xhr);
-            }
-        });
     });
 });

@@ -1,6 +1,6 @@
 <use master=""/>
 <viewdata model="AjaxContinuations.Product" />
-<div style="style:none" id="product-dialog" title="Create new product" class="dialog">
+<div style="display:none" id="product-dialog" title="Create new product" class="dialog">
   <Form model="Product">
     <fieldset>
       <div class="col">

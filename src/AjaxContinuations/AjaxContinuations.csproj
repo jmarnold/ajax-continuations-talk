@@ -117,9 +117,6 @@
     <Content Include="content\styles\jquery-ui-1.8.7.custom.css" />
     <Content Include="Global.asax" />
     <Content Include="Shared\bindings.xml" />
-    <None Include="adnug.asset.config">
-      <SubType>Designer</SubType>
-    </None>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -127,6 +124,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="core.asset.config" />
     <None Include="ProductDialog.spark" />
   </ItemGroup>
   <ItemGroup>
@@ -141,10 +139,13 @@
     </Compile>
     <Compile Include="IEntity.cs" />
     <Compile Include="IEntityRepository.cs" />
-    <Compile Include="Product.cs" />
+    <Compile Include="PageExtensions.cs" />
+    <Compile Include="Products.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="Products.spark" />
