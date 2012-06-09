@@ -1,4 +1,3 @@
 ﻿﻿<use namespace="FubuMVC.Core.UI" />
-<use namespace="FubuMVC.Ajax" />
 ﻿<use namespace="AjaxContinuations" />
 <use namespace="System.Linq" />
