@@ -44,8 +44,9 @@ namespace AjaxContinuations
         {
             _repository.Update(product);
             var continuation = AjaxContinuation.Successful();
-            continuation.ShouldRefresh = true;
-            return continuation;
+        	continuation["entity"] = product;
+
+        	return continuation;
         }
 
         public ProductListViewModel Index(ProductListRequest request)
