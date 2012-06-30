@@ -43,10 +43,7 @@ namespace AjaxContinuations
         public AjaxContinuation post_products_create(Product product)
         {
             _repository.Update(product);
-            var continuation = AjaxContinuation.Successful();
-        	continuation["entity"] = product;
-
-        	return continuation;
+            return AjaxContinuation.Successful();
         }
 
         public ProductListViewModel Index(ProductListRequest request)

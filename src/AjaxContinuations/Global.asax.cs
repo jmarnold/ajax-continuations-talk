@@ -1,4 +1,5 @@
 ﻿using System;
+using Bottles;
 using FubuMVC.Core;
 using FubuMVC.StructureMap;
 
@@ -12,6 +13,8 @@ namespace AjaxContinuations
                 .For<AjaxContinuationsFubuRegistry>()
                 .StructureMapObjectFactory(x => x.AddRegistry<AjaxContinuationsRegistry>())
                 .Bootstrap();
+
+			PackageRegistry.AssertNoFailures();
         }
     }
 }
